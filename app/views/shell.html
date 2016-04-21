@@ -1,0 +1,46 @@
+﻿<div>
+    <header class="navbar navbar-fixed-top header-navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img alt="" class="logo-normal" />
+            </a>
+            <div class="clearfix">
+                <div class="pull-left">
+                    <h3 style="margin-top: 10px; margin-left: 50px; color: white;">XXX系统 <small style="color: white;" data-bind="visible:isLoading"><i class="fa fa-spinner fa-spin"></i> 加载中...</small></h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-nav menu-fixed">
+        <section class="main-nav-box">
+            <div id="slider-bar-content" class="collapse navbar-collapse">
+                <div class="user-box clearfix hidden-xs">
+                    <img alt="" data-bind="attr:{src:'img/no-profile.jpg'}" />
+                    <div class="user-info pull-left">
+                        <h4>张三</h4>
+                        <h6>部门经理</h6>
+                    </div>
+                </div>
+                <ul class="nav nav-menu-list">
+                     <!-- ko foreach: router.navigationModel -->
+                    <li data-bind="css:{active: isActive },attr:{title:title}">
+                        <a data-bind="attr: { href: hash }">
+                            <i data-bind="css: iconClass"></i>
+                            <span data-bind="text: title"></span>
+                        </a>
+                    </li>
+                    <!-- /ko -->
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="page-host">
+                <!--ko router: { transition:'entrance', cacheViews:false }--><!--/ko-->
+            </div>
+        </div>
+    </div>
+    <div class="modalBlockout" style="z-index: 9999;" data-bind="visible:isLoading">
+    </div>
+</div>

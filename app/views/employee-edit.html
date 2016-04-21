@@ -1,0 +1,31 @@
+<div class="modal fade">
+    <div class="modal-dialog w30">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-bind="click: close">×</button>
+                <h4 class="modal-title"> 添加员工</h4>
+            </div>
+            <div class="modal-body" data-bind="with:employee">
+                <div class="form-group" data-bind="validationElement: id">
+                    <label class="label-title" for="id">Id</label>
+                    <input type="text" class="form-control" name="id" data-bind="value:id">
+                    <label class="help-block" data-bind="validationMessage: id"></label>
+                </div>
+				<div class="form-group" data-bind="validationElement: name">
+                    <label class="label-title" for="name">姓名</label>
+                    <input type="text" class="form-control" name="name" data-bind="value:name">
+                    <label class="help-block" data-bind="validationMessage: name"></label>
+                </div>
+                <div class="form-group" data-bind="validationElement: desc">
+                    <label class="label-title" for="desc">描述</label>
+                    <textarea class="form-control" name="desc" rows="3" data-bind="value: desc"></textarea>
+                      <label class="help-block" data-bind="validationMessage: desc"></label>
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <button class="btn btn-primary" data-bind="click: save">Save</button>
+                <button class="btn btn-default" data-bind="click: close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
